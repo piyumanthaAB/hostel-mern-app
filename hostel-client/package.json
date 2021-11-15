@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set \"INLINE_RUNTIME_CHUNK=false\" && set \"IMAGE_INLINE_SIZE_LIMIT=0\"  && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
