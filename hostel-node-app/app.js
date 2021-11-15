@@ -22,7 +22,7 @@ const queryRouter = require('./routes/queryRoutes');
 const app = express();
 
 // set security HTTP headers
-app.use(helmet());
+// app.use(helmet());
 
 
 // Log API requests in development
