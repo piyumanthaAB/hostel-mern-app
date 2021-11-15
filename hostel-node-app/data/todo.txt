@@ -1,0 +1,14 @@
+1. new route to update student photo
+2. change current student update controller to read JSON data insted form-url-encoded data 
+3. need to validate committee member and committee value when updating those values
+4. new controller to view deleted accounts ({active:false})
+5. need to test passwordChanged at student model
+6. ned to set max imag size for user photo
+7. need to donfig hpp whitelist
+8. need to send jwt via cookie and , in protect function, need to authenticate using cookie
+
+
+
+============== questions? ========================
+
+1. what happen to the students if we delete a hostel from the system?

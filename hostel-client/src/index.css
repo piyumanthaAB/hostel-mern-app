@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html {
+  font-size: 80%;
+}
+
+.homeCover {
+  width: 100%;
+  min-height: 88vh;
+  /* background-color: rebeccapurple; */
+  background-image: url("./images/uniCover.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  backdrop-filter: 50px;
+}
+
+.homeCover__img {
+  height: auto;
+  width: 100%;
+  background-size: cover;
+}
+
+.hostelFacilities {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.imageListDiv {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rulesRegulations {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.FooterContainer {
+  width: 100%;
+  min-height: 100px;
+  background-color: #137daa;
+  text-align: center;
+  padding: 3rem 10rem;
+  /* font-size: 1.5rem; */
+}
+
+.footerLogo {
+  height: 70px;
+  width: auto;
+  margin: 0 0 1rem;
+}
+
+.footerH3 {
+  color: white;
+}
+
+.rulesRegulationsContainer {
+  width: 50%;
+  min-height: 60vh;
+  padding: 2rem 0;
+  /* background-color: rgb(241, 241, 241); */
+  margin: 0 auto;
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll; */
+}
+
+.spinner {
+  background-color: red;
+}

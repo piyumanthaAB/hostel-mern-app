@@ -1,0 +1,55 @@
+{
+  "name": "hostel-node-app",
+  "version": "1.0.0",
+  "description": "hostel management system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node hostel-node-app/server.js",
+    "client": "npm start --prefix hostel-client",
+    "server:dev": "set NODE_ENV=development&&nodemon hostel-node-app/server.js",
+    "server:prod": "set NODE_ENV=production&&nodemon hostel-node-app/server.js",
+    "start:dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "start:prod": "concurrently \"npm run server:prod\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix hostel-client && npm run build --prefix hostel-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyumanthaAB/hostel-node-app.git"
+  },
+  "author": "cherin piyumantha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piyumanthaAB/hostel-node-app/issues"
+  },
+  "homepage": "https://github.com/piyumanthaAB/hostel-node-app#readme",
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.1.0",
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.4.0",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.6.5",
+    "react-bootstrap": "^2.0.2",
+    "validator": "^13.6.0",
+    "xss-clean": "^0.1.1"
+  },
+  "engines": {
+    "node": "^14"
+  }
+}

@@ -1,0 +1,1 @@
+web: node hostel-node-app/server.js
