@@ -27,7 +27,7 @@ mongoose.connect(DB, {
 
 // create web server and listen to the incoming requests
 const server = app.listen(process.env.PORT, () => {
-    console.log(`Server is listening in port ${process.env.port}`);
+    console.log(`Server is listening in port ${process.env.PORT}`);
 });
 
 // catch asynchronous errors

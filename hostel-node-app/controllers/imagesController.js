@@ -8,7 +8,7 @@ let { promisify } = require('util');
 // save images in the public folder
 const multerStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'hostel-node-app/public/gallery');
+        cb(null, 'uploads/gallery');
     },
     filename: (req, file, cb) => {
         const ext = file.mimetype.split('/')[1];

@@ -49,6 +49,9 @@ app.use(cookieParser());
 
 // set the public folder to serve static files
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '../uploads')));
+
+console.log({path:path.join(__dirname, '../uploads')});
 
 // body parser, reading JSON data from body into req.body
 app.use(express.json({ limit: '10kb' }));
