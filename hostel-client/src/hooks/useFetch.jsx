@@ -22,7 +22,11 @@ const useFetch = (url) => {
                 const res = await axios({
                     method: 'GET',
                     url,
-                    cancelToken:source.token
+                    cancelToken: source.token,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+                    }
                 });
                     
 

@@ -23,7 +23,11 @@ const app = express();
 
 // set security HTTP headers
 // app.use(helmet());
-
+app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    })
+  );
 
 // Log API requests in development
 if (process.env.NODE_ENV === 'development') {
