@@ -38,8 +38,8 @@ exports.getAllRules = catchAsync(async (req, res, next) => {
         status: 'success',
         results: rulesRegulations.length,
         data: {
-            url_1:`${req.protocol}://${req.get('host')}/api/v1/auth/resetPassword/`,
-            url_2:`${req.protocol}://${req.get('origin')}/api/v1/auth/resetPassword/`,
+            url_1:`${req.protocol}://${req.get('host')}/maintenance`,
+            url_2:`${req.protocol}://${req.get('origin')}/contact`,
             rulesRegulations
         }
     })
