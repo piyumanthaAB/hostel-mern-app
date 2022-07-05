@@ -29,9 +29,16 @@ exports.getAllRules = catchAsync(async (req, res, next) => {
     
     const rulesRegulations = await RulesRegulations.find();
 
+    console.log({
+        '🛑🛑origin': req.get('origin'),
+        '🛑🛑🛑host':req.get('host')
+    });
+
     res.status(200).json({
         status: 'success',
         results: rulesRegulations.length,
+        url_1:`${req.protocol}://${req.get('host')}/api/v1/auth/resetPassword/`,
+        url_2:`${req.protocol}://${req.get('origin')}/api/v1/auth/resetPassword/`,
         data: {
             rulesRegulations
         }

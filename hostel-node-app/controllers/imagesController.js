@@ -38,10 +38,16 @@ exports.createImage = catchAsync(async (req, res, next) => {
 
     // console.log(req.body);
     // console.log(req.file);
+    const { hostelLocation } = req.body;
+    let url;
+    
+    if (process.env.NODE_ENV === 'production') {
+        url = `https://${req.get('host')}/gallery/${req.file.filename}`;
+    } else {
+        url = `${req.protocol}://${req.get('host')}/gallery/${req.file.filename}`;  
+    }
 
-    const url = `${req.protocol}://${req.get('host')}/gallery/${req.file.filename}`;
-
-    const photo = await HostelImages.create({ url });
+    const photo = await HostelImages.create({ url, hostelLocation });
 
     res.status(201).json({
         status: 'success',

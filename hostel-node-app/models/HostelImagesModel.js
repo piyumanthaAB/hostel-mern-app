@@ -5,6 +5,14 @@ const hostelImageSchema = new mongoose.Schema({
         type: String,
         required: [true, 'An image must have a URL'],
         unique:true
+    },
+    hostelLocation: {
+        type: String,
+        required: [true, 'A hostel image must have a location'],
+        enum: {
+            values: ['maddawatta', 'eliyakanda', ],
+            message: "student committee must be one of : ['maddawatta', 'eliyakanda',]"
+        }
     }
 }, {
     toJSON: { virtuals: true },
