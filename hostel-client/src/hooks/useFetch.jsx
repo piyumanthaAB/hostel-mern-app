@@ -28,6 +28,8 @@ const useFetch = (url) => {
                         'Access-Control-Allow-Origin': '*'
                     }
                 });
+
+                console.log({res});
                     
 
                 if (res.status === 200) {
