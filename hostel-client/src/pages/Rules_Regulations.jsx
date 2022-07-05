@@ -5,11 +5,14 @@ const RulesRegulations = () => {
 
     const { data:rules, isPending, isError } = useFetch('/api/v1/rules-regulations');
 
+    console.log({data})
 
     return (
         <>
             <div className="rulesRegulationsContainer">
                 <h2>Rules and Regulations</h2>
+                <p>URL_1 : { data.url_1}</p><br />
+                <p>URL_2 : { data.url_2}</p>
                 {isPending && <PuffLoader/>}
                 
                 {rules &&
